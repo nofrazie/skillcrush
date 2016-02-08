@@ -12,3 +12,4 @@ city = my_hash[:hometown]
 state = my_hash[:state]
 
 puts "My name is #{name} and I am from #{city}, #{state}."
+puts "My name is #{name} and I am from #{city}, #{state}."
