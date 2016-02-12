@@ -31,11 +31,15 @@ def get_birth_path_num(birthdate)
   	9 => "Your numerology number is #{sum}.\nThis is the teacher. Number Nine is a tolerant, somewhat impractical, and sympathetic vibration. Ruled by Mars."
   }
 
-  $message = numerology[sum]
+  @message = numerology[sum]
+end
+
+get '/newpage' do
+  erb :newpage
 end
 
 get '/:birthdate' do
   birthdate = params[:birthdate]
   birth_path_num = get_birth_path_num(birthdate)
-  "#{$message}"
+  erb :index
 end
