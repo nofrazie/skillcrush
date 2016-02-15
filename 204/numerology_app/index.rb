@@ -40,6 +40,14 @@ def get_birth_path_message(numerology_num)
   return message
 end
 
+def valid_birthdate(input)
+  if input.length == 8 && !input.match(/^[0-9]+[0-9]$/).nil?
+    return true
+  else
+    return false
+  end
+end
+
 get '/newpage' do
   erb :newpage
 end
@@ -49,8 +57,14 @@ get '/' do
 end
 
 post '/' do
-  birth_path_num = get_birth_path_num(params[:birthdate])
-  redirect "/message/#{birth_path_num}"
+  birthdate = params[:birthdate]
+  if valid_birthdate(birthdate)
+    birth_path_num = get_birth_path_num(birthdate)
+    redirect "/message/#{birth_path_num}"
+  else
+    @error = "Sorry, your input wasn't valid. Try again!"
+    erb :form
+  end
 end
 
 get '/message/:birth_path_num' do
