@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: numerology_mvc_development
+  pool: 5
+  host: localhost
+  username: nolanfrazier
+  password:
+
+test:
+  adapter: postgresql
+  database: numerology_mvc_development
+  pool: 5
+  host: localhost
+  username: nolanfrazier
+  password:
