@@ -2,16 +2,13 @@ class Person < ActiveRecord::Base
 
   validates_presence_of :birthdate, :first_name, :last_name
 
-  # Ask for the date and store it into a variable birthdate
   def self.get_birth_path_num(birthdate)
     sum = 0
-    #Using the date class convert the date into a string and split it to be iterated
-    #using the each statement convert each split from the array into an integer and add it to the original sum
+
     birthdate.split("").each do |num|
     	sum += num.to_i
     end
 
-    #While the sum is 10 or greater continue splitting it until you have a number that is one digit
     while sum.to_s.length == 2
     	sum2 = 0
     	sum.to_s.split("").each do |i|
@@ -40,4 +37,13 @@ class Person < ActiveRecord::Base
     message = numerology[numerology_num]
     return message
   end
+
+  def self.valid_birthdate(input)
+    if(input.length == 8 && !input.match(/^[0-9]+[0-9]$/).nil?)
+      true
+    else
+      false
+    end
+  end
+
 end

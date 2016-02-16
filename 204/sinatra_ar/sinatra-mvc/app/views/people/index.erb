@@ -1,9 +1,10 @@
-require 'Date'
 <h1>People</h1>
 <table>
   <thead>
     <th>Name</th>
     <th>Birthdate</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </thead>
   <tbody>
     <% @people.each do |person| %>
@@ -15,7 +16,7 @@ require 'Date'
           <%= "#{person.birthdate.strftime("%b %d, %Y")}" %>
         </td>
         <td>
-          <a href="<%= "/people/#{person.id}/edit" %>">Edit</a>
+          <a href="<%= "/people/#{person.id}/edit" %>"> Edit </a>
         </td>
         <td>
           <form action="<%= "/people/#{person.id}" %>" method="post">
