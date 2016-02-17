@@ -22,6 +22,7 @@ GEM
     minitest (5.8.4)
     pg (0.18.4)
     pg (0.18.4-x64-mingw32)
+    puma (2.15.3)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -60,6 +61,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   pg
+  puma
   rack
   rack-test
   rake
