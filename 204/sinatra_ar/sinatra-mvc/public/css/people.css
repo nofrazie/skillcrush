@@ -1,7 +1,74 @@
-.new-person {
-
+body {
+  height: 100%;
 }
 
-.edit-person {
+.navbar {
+  height: 60px;
+}
 
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand {
+  color: steelblue;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: steelblue;
+  border-bottom: 1px solid steelblue;
+}
+
+.home_paragraph {
+  font-size: 18px;
+}
+
+.home_form, .home_paragraph{
+  margin: 80px 5px 145px 5px;
+}
+
+.home_form label {
+  font-size: 16px;
+}
+
+.home_form input[type="date"] {
+  font-size: 16px;
+}
+
+.new-person, .edit-person {
+  margin: 30px 15px 50px 15px;
+}
+
+.new-form, .edit-form {
+  margin-top: 30px;
+  margin-bottom: 29px;
+}
+
+td, th {
+  padding: 3px 5px 0px 0px;
+}
+
+tr {
+  border-bottom: 1px solid #eee;
+}
+
+table {
+  width: 600px;
+  margin-bottom: 50px;
+}
+
+.btn {
+  padding: 4px 10px;
+}
+
+footer {
+  height:75px;
+  background-color: steelblue;
+}
+
+footer p {
+  margin-top: 25px;
+  color: white;
 }
