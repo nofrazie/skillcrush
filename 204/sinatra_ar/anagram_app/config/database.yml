@@ -1,15 +1,15 @@
 development:
   adapter: postgresql
-  database: numerology_development
+  database: anagram_development
   pool: 5
   host: localhost
-  username: postgres
-  password: 123456
-    
+  username: nolanfrazier
+  password:
+
 test:
   adapter: postgresql
-  database: numerology_test
+  database: anagram_test
   pool: 5
   host: localhost
-  username: postgres
-  password: 123456
+  username: nolanfrazier
+  password:
