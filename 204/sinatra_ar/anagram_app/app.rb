@@ -16,6 +16,7 @@ Dir[APP_ROOT.join('app', 'controllers', '*.rb')].sort{|a,b| !a.include?("index")
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |f| require f }
 
 ActiveRecord::Base.logger = Logger.new(STDOUT)
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 Dir[APP_ROOT.join('app/models', '*.rb')].each do |model_file|
   filename = File.basename(model_file).gsub('.rb', '')

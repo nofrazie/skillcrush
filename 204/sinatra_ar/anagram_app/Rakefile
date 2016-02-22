@@ -1,5 +1,6 @@
 require "sinatra/activerecord/rake"
-require 'rspec/core/rake_task'
+require "rspec/core/rake_task"
+require "./app"
 
 namespace :db do
   task :load_config do
